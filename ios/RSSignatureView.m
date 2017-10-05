@@ -189,7 +189,7 @@
 
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths firstObject];
-	NSString *tempPath = [documentsDirectory stringByAppendingFormat:@"/signature.png"];
+	NSString *tempPath = [documentsDirectory stringByAppendingFormat:[self getTempPath]];
 
 	//remove if file already exists
 	if ([[NSFileManager defaultManager] fileExistsAtPath:tempPath]) {
@@ -218,6 +218,17 @@
 
 -(void) erase {
 	[self.sign erase];
+}
+
+-(NSString *) getTempPath {
+    NSDate *date = [NSDate date];
+    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+    [outputFormatter setDateFormat:@"dd_MM_yyyy_HH_mm_ss"];
+    
+    NSString *dateString = [outputFormatter stringFromDate:date];
+    NSString *tempPath = [NSString stringWithFormat:@"/%@_signature.png", dateString];
+    
+    return tempPath
 }
 
 @end

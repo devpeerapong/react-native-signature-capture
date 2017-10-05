@@ -10,6 +10,8 @@ import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
 
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ByteArrayOutputStream;
@@ -145,7 +147,7 @@ public class RSSignatureCaptureMainView extends LinearLayout implements OnClickL
     }
 
     // set the file name of your choice
-    String fname = "signature.png";
+    String fname = this.getFileName();
 
     // in our case, we delete the previous file, you can remove this
     File file = new File(myDir, fname);
@@ -213,5 +215,12 @@ public class RSSignatureCaptureMainView extends LinearLayout implements OnClickL
     ReactContext reactContext = (ReactContext) getContext();
     reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(getId(), "topChange", event);
 
+  }
+
+  private String getFileName() {
+    Date currentTime = Calendar.getInstance().getTime();
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss_signature.png")
+
+    return dateFormat.format(currentTime)
   }
 }
