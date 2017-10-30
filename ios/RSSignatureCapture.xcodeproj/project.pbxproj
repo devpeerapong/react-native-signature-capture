@@ -10,7 +10,6 @@
 		0C53A9EE1B56134F004F2642 /* RSSignatureViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C53A9ED1B56134F004F2642 /* RSSignatureViewManager.m */; };
 		0C53A9F31B5613AF004F2642 /* PPSSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C53A9F01B5613AF004F2642 /* PPSSignatureView.m */; };
 		0C53A9F41B5613AF004F2642 /* RSSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C53A9F21B5613AF004F2642 /* RSSignatureView.m */; };
-		ED4515A704E2F59314020F0C /* libPods-RSSignatureCapture.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 875DCCC15BE72732C62F480B /* libPods-RSSignatureCapture.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,9 +32,6 @@
 		0C53A9F01B5613AF004F2642 /* PPSSignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSSignatureView.m; sourceTree = "<group>"; };
 		0C53A9F11B5613AF004F2642 /* RSSignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSignatureView.h; sourceTree = "<group>"; };
 		0C53A9F21B5613AF004F2642 /* RSSignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSignatureView.m; sourceTree = "<group>"; };
-		184C9B21629DA45E2AC4377A /* Pods-RSSignatureCapture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSignatureCapture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSSignatureCapture/Pods-RSSignatureCapture.debug.xcconfig"; sourceTree = "<group>"; };
-		875DCCC15BE72732C62F480B /* libPods-RSSignatureCapture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSSignatureCapture.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B69A991E31458A801BE985C9 /* Pods-RSSignatureCapture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSignatureCapture.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSSignatureCapture/Pods-RSSignatureCapture.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +39,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED4515A704E2F59314020F0C /* libPods-RSSignatureCapture.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +55,6 @@
 				0C53A9EC1B56134F004F2642 /* RSSignatureViewManager.h */,
 				0C53A9ED1B56134F004F2642 /* RSSignatureViewManager.m */,
 				0C53A99F1B56113D004F2642 /* Products */,
-				8A7DEEB73A389DB547625C9E /* Pods */,
-				4753579D5F888C558A36877D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,23 +66,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4753579D5F888C558A36877D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				875DCCC15BE72732C62F480B /* libPods-RSSignatureCapture.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8A7DEEB73A389DB547625C9E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				184C9B21629DA45E2AC4377A /* Pods-RSSignatureCapture.debug.xcconfig */,
-				B69A991E31458A801BE985C9 /* Pods-RSSignatureCapture.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,11 +73,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C53A9B21B56113D004F2642 /* Build configuration list for PBXNativeTarget "RSSignatureCapture" */;
 			buildPhases = (
-				7880502F3280A585554B55FB /* [CP] Check Pods Manifest.lock */,
 				0C53A99A1B56113D004F2642 /* Sources */,
 				0C53A99B1B56113D004F2642 /* Frameworks */,
 				0C53A99C1B56113D004F2642 /* CopyFiles */,
-				287CA49ADBEAB0A11CDB47C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,42 +116,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		287CA49ADBEAB0A11CDB47C9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSSignatureCapture/Pods-RSSignatureCapture-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7880502F3280A585554B55FB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RSSignatureCapture-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C53A99A1B56113D004F2642 /* Sources */ = {
@@ -228,7 +166,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -265,7 +202,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -275,7 +211,6 @@
 		};
 		0C53A9B31B56113D004F2642 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 184C9B21629DA45E2AC4377A /* Pods-RSSignatureCapture.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -283,7 +218,7 @@
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/../../../React/**",
 				);
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -291,7 +226,6 @@
 		};
 		0C53A9B41B56113D004F2642 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B69A991E31458A801BE985C9 /* Pods-RSSignatureCapture.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,7 +233,7 @@
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/../../../React/**",
 				);
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
