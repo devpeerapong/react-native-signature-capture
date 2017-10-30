@@ -234,7 +234,7 @@
     NSString *dateString = [outputFormatter stringFromDate:date];
     NSString *tempPath = [NSString stringWithFormat:@"/%@_signature.png", dateString];
     
-    return tempPath
+    return tempPath;
 }
 
 @end
