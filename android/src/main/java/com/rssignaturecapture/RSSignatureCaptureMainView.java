@@ -30,6 +30,7 @@ import android.widget.LinearLayout;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import java.lang.Boolean;
+import java.util.Date;
 
 public class RSSignatureCaptureMainView extends LinearLayout implements OnClickListener,RSSignatureCaptureView.SignatureCallback {
   LinearLayout buttonsLayout;
@@ -220,8 +221,8 @@ public class RSSignatureCaptureMainView extends LinearLayout implements OnClickL
 
   private String getFileName() {
     Date currentTime = Calendar.getInstance().getTime();
-    SimpleDateFormat dateFormat = new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss_signature.png")
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss");
 
-    return dateFormat.format(currentTime)
+    return dateFormat.format(currentTime) + "_signature.png";
   }
 }
